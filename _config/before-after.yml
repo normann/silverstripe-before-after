@@ -1,0 +1,6 @@
+---
+Name: normann-before-after
+---
+SilverStripe\Admin\LeftAndMain:
+  extra_requirements_css:
+    - 'normann/silverstripe-before-after: client/dist/css/admin.css'

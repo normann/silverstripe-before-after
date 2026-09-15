@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ruleset name="normann/silverstripe-before-after">
+    <description>Coding standard for the Before/After Image module</description>
+
+    <file>src</file>
+    <file>tests</file>
+
+    <arg name="colors"/>
+    <arg value="sp"/>
+
+    <rule ref="PSR12"/>
+</ruleset>

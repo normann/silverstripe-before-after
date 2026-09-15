@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  phpunit:
+    uses: silverstripe/gha-ci/.github/workflows/ci.yml@v1
+    with:
+      phpunit: true
+      phplinting: true
+      phpcoverage: false

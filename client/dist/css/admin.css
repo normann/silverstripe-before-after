@@ -1,0 +1,95 @@
+/** Before/After Image: CMS menu icon **/
+.icon-before-after-image-block {
+    background: url('../images/icon.svg');
+    background-repeat: no-repeat;
+}
+
+.popover-option-set__button-container .icon-before-after-image-block {
+    background-position: 0.85rem;
+    background-size: 1.75rem;
+    padding-left: 3.2rem;
+}
+
+.element-editor-header__icon-container .icon-before-after-image-block {
+    background-position: 0.85rem;
+    background-position-x: 0.3rem;
+    background-position-y: 0.5rem;
+    padding-left: 2.1rem;
+}
+
+/** Before/After Image: editing form in the CMS **/
+#ConfigSet .ui-tabs-tab a {
+    padding: 1.5rem;
+    color: rgb(15, 95, 248);
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    width: auto;
+}
+
+#ConfigSet ul.nav.nav-tabs {
+    margin-top: 4rem;
+    display: flex;
+}
+
+.before-after-image-edit-form .field.slider input.slider {
+    margin: 5px 5px 0 5px;
+    max-width: 500px;
+}
+
+.before-after-image-edit-form .field.slider .alert {
+    max-width: 500px;
+}
+
+.before-after-image-edit-form .ui-slider .ui-slider-handle {
+    background-color: #1c6ca1;
+}
+
+.before-after-image-edit-form .ui-slider.ui-widget.ui-widget-content {
+    border: 1px solid #c5c5c5;
+}
+
+.before-after-image-edit-form .form-group.field.optionset .optionset {
+    display: flex;
+    gap: 20px;
+}
+
+.before-after-image-edit-form .optionset .badge-shape-image {
+    background: transparent;
+    border: thin dotted rgb(15, 95, 248);
+    border-radius: 6px;
+}
+
+.before-after-image-edit-form .optionset .direction-shape-image {
+    width: 64px;
+    height: 48px;
+    background: transparent;
+    border: thin dotted rgb(15, 95, 248);
+    border-radius: 6px;
+}
+
+#Form_ItemEditForm_SliderDirection {
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+#Form_ItemEditForm_SliderDirection .direction-shape-image {
+    width: 108px;
+    height: 81px;
+}
+
+#Form_ItemEditForm_SliderDirection_Holder,
+#Form_ItemEditForm_BadgeShape_Holder {
+    align-items: center;
+}
+
+.before-after-image-edit-form .optionset .radio.form-check .form-check-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+#Form_ItemEditForm_BadgeShape .form-check-label {
+    gap: 25px;
+}

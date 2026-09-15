@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="48" viewBox="0 0 64 48">
+  <!-- "Left-Top to Right-Bottom": divider runs top-right -> bottom-left (NE-SW), the
+       handle itself drags along the perpendicular NW-SE axis -->
+  <defs>
+    <clipPath id="frame-dr"><rect x="1" y="1" width="62" height="46" rx="6"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame-dr)">
+    <polygon points="0,0 64,0 0,48" fill="#cbd5e1"/>
+    <polygon points="64,0 64,48 0,48" fill="#0f5ff8"/>
+    <line x1="64" y1="0" x2="0" y2="48" stroke="#ffffff" stroke-width="2"/>
+  </g>
+  <rect x="1" y="1" width="62" height="46" rx="6" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <g transform="rotate(45 32 24)">
+    <circle cx="32" cy="24" r="8" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+    <path d="M24,20 L18,24 L24,28 Z" fill="#334155"/>
+    <path d="M40,20 L46,24 L40,28 Z" fill="#334155"/>
+  </g>
+</svg>
