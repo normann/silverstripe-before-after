@@ -1,8 +1,8 @@
 # silverstripe-before-after
 
+[![CI](https://github.com/normann/silverstripe-before-after/actions/workflows/ci.yml/badge.svg)](https://github.com/normann/silverstripe-before-after/actions/workflows/ci.yml)
+[![Latest Stable Version](https://img.shields.io/packagist/v/normann/silverstripe-before-after.svg)](https://packagist.org/packages/normann/silverstripe-before-after)
 [![License](https://img.shields.io/badge/license-BSD--3--Clause-blue.svg)](LICENSE)
-
-> **Pre-release.** Not yet pushed or tagged. CI/Packagist badges go back in once it is.
 
 A draggable **Before/After image comparison slider** for SilverStripe 5 — a `BeforeAfterImage`
 DataObject widget (its own CMS section) plus a `BeforeAfterImageBlock` [Elemental](https://github.com/silverstripe/silverstripe-elemental)
@@ -43,8 +43,6 @@ tractorcow/silverstripe-colorpicker ^4.2. See `composer.json` for exact constrai
 composer require normann/silverstripe-before-after
 vendor/bin/sake dev/build flush=1
 ```
-
-Not on Packagist yet — see [CONTRIBUTING.md](CONTRIBUTING.md) for a local `path` repository.
 
 ## Usage
 
