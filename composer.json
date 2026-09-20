@@ -1,6 +1,6 @@
 {
     "name": "normann/silverstripe-before-after",
-    "description": "A draggable Before/After image comparison slider for SilverStripe 5, available as a reusable DataObject widget and as an Elemental content block.",
+    "description": "A draggable Before/After image comparison slider for SilverStripe 6, available as a reusable DataObject widget and as an Elemental content block.",
     "type": "silverstripe-vendormodule",
     "keywords": [
         "silverstripe",
@@ -21,20 +21,20 @@
         "issues": "https://github.com/normann/silverstripe-before-after/issues"
     },
     "require": {
-        "php": "^8.1",
-        "silverstripe/framework": "^5.0",
-        "silverstripe/admin": "^2.0",
-        "silverstripe/assets": "^2.0",
-        "silverstripe/versioned": "^2.0",
-        "dnadesign/silverstripe-elemental": "^5.0",
-        "unclecheese/display-logic": "^3.0",
-        "tractorcow/silverstripe-sliderfield": "^4.2",
-        "tractorcow/silverstripe-colorpicker": "^4.2"
+        "php": "^8.3",
+        "silverstripe/framework": "^6.0",
+        "silverstripe/admin": "^3.0",
+        "silverstripe/assets": "^3.0",
+        "silverstripe/versioned": "^3.0",
+        "dnadesign/silverstripe-elemental": "^6.0",
+        "unclecheese/display-logic": "^4.0",
+        "firesphere/rangefield": "^1.3",
+        "bimthebam/silverstripe-native-color-input": "^1.1"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.6",
+        "phpunit/phpunit": "^11.3",
         "squizlabs/php_codesniffer": "^3.7",
-        "silverstripe/recipe-testing": "^3"
+        "silverstripe/recipe-testing": "^4"
     },
     "autoload": {
         "psr-4": {

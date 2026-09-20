@@ -4,7 +4,7 @@
 [![Latest Stable Version](https://img.shields.io/packagist/v/normann/silverstripe-before-after.svg)](https://packagist.org/packages/normann/silverstripe-before-after)
 [![License](https://img.shields.io/badge/license-BSD--3--Clause-blue.svg)](LICENSE)
 
-A draggable **Before/After image comparison slider** for SilverStripe 5 — a `BeforeAfterImage`
+A draggable **Before/After image comparison slider** for SilverStripe 6 — a `BeforeAfterImage`
 DataObject widget (its own CMS section) plus a `BeforeAfterImageBlock` [Elemental](https://github.com/silverstripe/silverstripe-elemental)
 block that drops it into any page.
 
@@ -33,9 +33,9 @@ Editing the Elemental block, with a live preview alongside:
 
 ## Requirements
 
-PHP ^8.1, silverstripe/framework ^5.0, silverstripe/admin ^2.0, dnadesign/silverstripe-elemental
-^5.0, unclecheese/display-logic ^3.0, tractorcow/silverstripe-sliderfield ^4.2,
-tractorcow/silverstripe-colorpicker ^4.2. See `composer.json` for exact constraints.
+PHP ^8.3, silverstripe/framework ^6.0, silverstripe/admin ^3.0, dnadesign/silverstripe-elemental
+^6.0, unclecheese/display-logic ^4.0, firesphere/rangefield ^1.3,
+bimthebam/silverstripe-native-color-input ^1.1. See `composer.json` for exact constraints.
 
 ## Installation
 

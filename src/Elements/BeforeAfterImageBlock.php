@@ -109,11 +109,7 @@ HTML;
         return _t(__CLASS__ . '.BlockType', 'Before/After Image Slider');
     }
 
-    /**
-     * @param bool $holder
-     * @return \SilverStripe\ORM\FieldType\DBHTMLText
-     */
-    public function forTemplate($holder = true)
+    public function forTemplate($holder = true): string
     {
         Requirements::css(
             ModuleResourceLoader::resourcePath('normann/silverstripe-before-after: client/dist/css/before-after.css')

@@ -2,21 +2,21 @@
 
 namespace Normann\BeforeAfter\Model;
 
+use Firesphere\RangeField\RangeField;
 use Normann\BeforeAfter\Elements\BeforeAfterImageBlock;
+use Normann\BeforeAfter\Forms\ColorField;
 use SilverStripe\Assets\Image;
 use SilverStripe\Core\Manifest\ModuleResourceLoader;
-use SilverStripe\Forms\CompositeValidator;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\OptionsetField;
-use SilverStripe\Forms\RequiredFields;
 use SilverStripe\Forms\TabSet;
+use SilverStripe\Forms\Validation\CompositeValidator;
+use SilverStripe\Forms\Validation\RequiredFieldsValidator;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 use SilverStripe\Versioned\Versioned;
 use SilverStripe\View\Requirements;
-use TractorCow\Colorpicker\Forms\ColorField;
-use TractorCow\SliderField\SliderField;
 use UncleCheese\DisplayLogic\Forms\Wrapper;
 
 class BeforeAfterImage extends DataObject
@@ -372,9 +372,10 @@ class BeforeAfterImage extends DataObject
             $fieldTitle = $fields->dataFieldByName($field)?->Title();
             $fields->replaceField(
                 $field,
-                SliderField::create($field, $fieldTitle)
-                    ->setMaximum(100)
-                    ->setMinimum(0)
+                RangeField::create($field, $fieldTitle)
+                    ->setMin(0)
+                    ->setMax(100)
+                    ->setDecimalPlaces(0)
             );
         }
 
@@ -461,7 +462,7 @@ HTML;
                 $fields->removeByName($fieldName);
             }
 
-            $fields->addFieldsToTab('Root.Main.ConfigSet.' . $prefix, $label_related_wrapper);
+            $fields->addFieldToTab('Root.Main.ConfigSet.' . $prefix, $label_related_wrapper);
 
             $label_related_wrapper->hideIf('LabelsVisibility')->isEqualTo('hideLabels');
 
@@ -495,7 +496,7 @@ HTML;
     {
         $compositeValidator = parent::getCMSCompositeValidator();
 
-        $compositeValidator->addValidator(RequiredFields::create([
+        $compositeValidator->addValidator(RequiredFieldsValidator::create([
             'Title',
             'BeforeImage',
             'AfterImage'
@@ -528,23 +529,22 @@ HTML;
         }
     }
 
-    /**
-     * @return DBHTMLText
-     */
-    public function forTemplate(): DBHTMLText
+    public function forTemplate(): string
     {
-        if ($this->exists()) {
-            $moduleResourcePrefix = 'normann/silverstripe-before-after: client/dist';
-
-            Requirements::css(
-                ModuleResourceLoader::resourcePath($moduleResourcePrefix . '/css/before-after.css')
-            );
-            Requirements::javascript(
-                ModuleResourceLoader::resourcePath($moduleResourcePrefix . '/js/before-after.js')
-            );
-
-            return $this->renderWith(static::class);
+        if (!$this->exists()) {
+            return '';
         }
+
+        $moduleResourcePrefix = 'normann/silverstripe-before-after: client/dist';
+
+        Requirements::css(
+            ModuleResourceLoader::resourcePath($moduleResourcePrefix . '/css/before-after.css')
+        );
+        Requirements::javascript(
+            ModuleResourceLoader::resourcePath($moduleResourcePrefix . '/js/before-after.js')
+        );
+
+        return $this->renderWith(static::class) ?? '';
     }
 
     /**
