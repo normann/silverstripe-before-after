@@ -1,6 +1,6 @@
 # Contributing
 
-Contributions are welcome, via pull request against the `main` branch.
+Contributions are welcome, via pull request against the `2` branch.
 
 ## Reporting bugs
 
