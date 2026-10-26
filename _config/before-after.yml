@@ -4,3 +4,9 @@ Name: normann-before-after
 SilverStripe\Admin\LeftAndMain:
   extra_requirements_css:
     - 'normann/silverstripe-before-after: client/dist/css/admin.css'
+# Gives images a CMS edit link (i.e. for the "Used on" tab of files, where the link is otherwise broken)
+Normann\BeforeAfter\Model\BeforeAfterImage:
+  extensions:
+    - SilverStripe\Admin\CMSEditLinkExtension
+  cms_edit_owner: Normann\BeforeAfter\Admin\BeforeAfterImageAdmin
+

@@ -39,10 +39,6 @@ class BeforeAfterImageBlock extends BaseElement
         'BeforeAfterImage',
     ];
 
-    private static array $cascade_deletes = [
-        'BeforeAfterImage',
-    ];
-
     private static array $cascade_duplicates = [
         'BeforeAfterImage',
     ];
