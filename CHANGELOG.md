@@ -7,8 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-Nothing has been tagged or published yet — this module has no releases. Everything below is
-still local, pre-first-commit work in progress.
+## [1.0.1] - 2026-10-27
+
+### Fixed
+
+- Unpublishing or archiving a `BeforeAfterImageBlock` no longer unpublishes or archives the
+  `BeforeAfterImage` it links to. A `BeforeAfterImage` can be shared by several blocks, so
+  `BeforeAfterImageBlock` no longer declares `$cascade_deletes`. The image now stays in the
+  "Before ‹[]› After" admin section until you delete it there.
+- The "Used on" tab of a file used by a `BeforeAfterImage` now links to the right edit form.
+  `BeforeAfterImage` now has `CMSEditLinkExtension` applied, with `BeforeAfterImageAdmin` as its
+  `cms_edit_owner`.
+
+## [1.0.0] - 2026-09-17
+
+First release, for SilverStripe 5 (`php` ^8.1, `silverstripe/framework` ^5.0).
 
 ### Added
 
@@ -28,3 +41,7 @@ still local, pre-first-commit work in progress.
   `IntersectionObserver`, resize handling) and a single stylesheet, with no dependency on
   Bootstrap or any other CSS framework — the templates carry only the module's own classes.
 - CMS admin styling for the section icon and the widget's edit form.
+
+[Unreleased]: https://github.com/normann/silverstripe-before-after/compare/1.0.1...1
+[1.0.1]: https://github.com/normann/silverstripe-before-after/compare/1.0.0...1.0.1
+[1.0.0]: https://github.com/normann/silverstripe-before-after/releases/tag/1.0.0

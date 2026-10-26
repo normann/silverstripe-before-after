@@ -1,6 +1,6 @@
 # Contributing
 
-Contributions are welcome, via pull request against the `main` branch.
+Contributions are welcome, via pull request against the `1` branch (SilverStripe 5) or the `2` branch (SilverStripe 6).
 
 ## Reporting bugs
 
